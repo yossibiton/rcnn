@@ -16,10 +16,10 @@ addpath('bin');
 addpath('nms');
 addpath('finetuning');
 addpath('bbox_regression');
-if exist('external/caffe/matlab/caffe')
-  addpath('external/caffe/matlab/caffe');
+if exist('../caffe/matlab')
+  addpath('../caffe/matlab');
 else
-  warning('Please install Caffe in ./external/caffe');
+  warning('Please install Caffe in ../caffe');
 end
 addpath('experiments');
 addpath('imdb');

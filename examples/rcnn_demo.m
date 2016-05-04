@@ -16,11 +16,10 @@ function rcnn_demo(demo_choice, use_gpu)
 % ---------------------------------------------------------
 
 clf;
-
 thresh = -1;
 
 if ~exist('demo_choice', 'var') || isempty(demo_choice)
-  demo_choice = 'PASCAL';
+  demo_choice = 'ILSVRC13';
 end
 
 switch demo_choice
@@ -83,5 +82,6 @@ for i = 1:length(ord)
   drawnow;
   pause;
 end
-
 fprintf('No more detection with score >= 0\n');
+% call caffe.reset_all() to reset caffe
+caffe.reset_all();
